@@ -1,0 +1,126 @@
+{
+  "code": 0,
+  "message": "Checkin! Get 1 Day",
+  "list": [
+    {
+      "id": 34641744,
+      "user_id": 131113,
+      "time": 1678233661502,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-03-08",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-03-08-131113"
+    },
+    {
+      "id": 34555306,
+      "user_id": 131113,
+      "time": 1678147272827,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-03-07",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-03-07-131113"
+    },
+    {
+      "id": 34468972,
+      "user_id": 131113,
+      "time": 1678060862036,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-03-06",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-03-06-131113"
+    },
+    {
+      "id": 34384350,
+      "user_id": 131113,
+      "time": 1677974461799,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-03-05",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-03-05-131113"
+    },
+    {
+      "id": 34300802,
+      "user_id": 131113,
+      "time": 1677888062364,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-03-04",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-03-04-131113"
+    },
+    {
+      "id": 34215745,
+      "user_id": 131113,
+      "time": 1677801662079,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-03-03",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-03-03-131113"
+    },
+    {
+      "id": 34131317,
+      "user_id": 131113,
+      "time": 1677715261928,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-03-02",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-03-02-131113"
+    },
+    {
+      "id": 34046559,
+      "user_id": 131113,
+      "time": 1677628861497,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-03-01",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-03-01-131113"
+    },
+    {
+      "id": 33962395,
+      "user_id": 131113,
+      "time": 1677542462237,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-02-28",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-02-28-131113"
+    },
+    {
+      "id": 33878447,
+      "user_id": 131113,
+      "time": 1677456062052,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-02-27",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-02-27-131113"
+    },
+    {
+      "id": 33797118,
+      "user_id": 131113,
+      "time": 1677369661588,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-02-26",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-02-26-131113"
+    },
+    {
+      "id": 33716295,
+      "user_id": 131113,
+      "time": 1677283262280,
+      "asset": "ss-1",
+      "business": "system:checkin:2023-02-25",
+      "change": "1.00000000",
+      "balance": "301.0000000000000000",
+      "detail": "checkin:2023-02-25-131113"
+    }
+  ]
+}

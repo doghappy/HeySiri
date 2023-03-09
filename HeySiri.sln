@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B8FC0DD6-7677-49B3-AD84-43A4126573A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6B680059-8CAB-4EE8-962A-B9844BB352C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeySiri.Core", "src\HeySiri.Core\HeySiri.Core.csproj", "{04626434-2007-4953-816A-5714240D5027}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeySiri.CLI", "src\HeySiri.CLI\HeySiri.CLI.csproj", "{4C385B40-310F-43AB-8A23-72A3759AFE78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeySiri.Core.Tests", "tests\HeySiri.Core.Tests\HeySiri.Core.Tests.csproj", "{09AC6570-6044-409B-AE92-33F32600E34F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04626434-2007-4953-816A-5714240D5027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04626434-2007-4953-816A-5714240D5027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04626434-2007-4953-816A-5714240D5027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04626434-2007-4953-816A-5714240D5027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C385B40-310F-43AB-8A23-72A3759AFE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C385B40-310F-43AB-8A23-72A3759AFE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C385B40-310F-43AB-8A23-72A3759AFE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C385B40-310F-43AB-8A23-72A3759AFE78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09AC6570-6044-409B-AE92-33F32600E34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09AC6570-6044-409B-AE92-33F32600E34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09AC6570-6044-409B-AE92-33F32600E34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09AC6570-6044-409B-AE92-33F32600E34F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04626434-2007-4953-816A-5714240D5027} = {B8FC0DD6-7677-49B3-AD84-43A4126573A5}
+		{4C385B40-310F-43AB-8A23-72A3759AFE78} = {B8FC0DD6-7677-49B3-AD84-43A4126573A5}
+		{09AC6570-6044-409B-AE92-33F32600E34F} = {6B680059-8CAB-4EE8-962A-B9844BB352C1}
+	EndGlobalSection
+EndGlobal

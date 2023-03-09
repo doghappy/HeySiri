@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "glados-checkin": {
+      "commandName": "Project",
+      "commandLineArgs": "glados checkin",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "bandwagon-status": {
+      "commandName": "Project",
+      "commandLineArgs": "bandwagon status",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
