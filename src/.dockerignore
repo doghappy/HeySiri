@@ -1,0 +1,6 @@
+*/bin
+*/obj
+*/docker-build.sh
+*/docker-build.ps1
+*/Properties/launchSettings.json
+*/appsettings.Development.json
