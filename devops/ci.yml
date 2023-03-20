@@ -21,6 +21,7 @@ stages:
             displayName: Build and Push
             inputs:
               command: buildAndPush
+              containerRegistry: DockerHub
               Dockerfile: $(Agent.BuildDirectory)/s/src/Dockerfile
               buildContext: $(Agent.BuildDirectory)/s/src
               repository: doghappy/heysiri
