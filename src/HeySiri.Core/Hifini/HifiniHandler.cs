@@ -4,17 +4,17 @@ using System.Text;
 using System.Text.Json;
 using HeySiri.Core.Reporters;
 
-namespace HeySiri.Core.Glados;
+namespace HeySiri.Core.Hifini;
 
-public class GladosHandler
+public class HifiniHandler
 {
-    public GladosHandler(HttpClient httpClient, IReporter reporter)
+    public HifiniHandler(HttpClient httpClient, IReporter reporter)
     {
         _httpClient = httpClient;
         _reporter = reporter;
     }
 
-    public const string Glados = "Glados";
+    public const string Hifini = "HiFiNi";
 
     private readonly HttpClient _httpClient;
     private readonly IReporter _reporter;
@@ -26,12 +26,11 @@ public class GladosHandler
 
     private async Task<CheckInResponse> CheckInAsync(string cookie)
     {
-        var request = new HttpRequestMessage(HttpMethod.Post, "https://glados.one/api/user/checkin")
+        var request = new HttpRequestMessage(HttpMethod.Post, "https://www.hifini.com/sg_sign.htm")
         {
-            Content = new StringContent("{\"token\":\"glados.network\"}", Encoding.UTF8, new MediaTypeHeaderValue("application/json")),
+            Content = new StringContent("000", Encoding.UTF8),
         };
-        request.Headers.Add("accept", "application/json");
-        request.Headers.Add("authority", "glados.one");
+        request.Headers.Add("X-Requested-With", "XMLHttpRequest");
         request.Headers.Add("cookie", cookie);
         var resMsg = await _httpClient.SendAsync(request);
         if (resMsg.IsSuccessStatusCode)

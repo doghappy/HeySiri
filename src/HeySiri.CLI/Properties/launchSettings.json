@@ -13,6 +13,13 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "hifini-checkin": {
+      "commandName": "Project",
+      "commandLineArgs": "hifini checkin",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }

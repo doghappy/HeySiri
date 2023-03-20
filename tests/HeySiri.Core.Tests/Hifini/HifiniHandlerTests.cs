@@ -1,12 +1,12 @@
-using HeySiri.Core.Glados;
+using HeySiri.Core.Hifini;
 using HeySiri.Core.Reporters;
 using Moq;
 using RichardSzalay.MockHttp;
 
-namespace HeySiri.Core.Tests.Glados;
+namespace HeySiri.Core.Tests.Hifini;
 
 [TestClass]
-public class GladosHandlerTests
+public class HifiniHandlerTests
 {
     [TestMethod]
     [DynamicData(nameof(CheckInCases))]
@@ -14,16 +14,14 @@ public class GladosHandlerTests
     {
         var mockHttp = new MockHttpMessageHandler();
         mockHttp
-            .When("https://glados.one/api/user/checkin")
-            .WithHeaders("authority","glados.one")
-            .WithHeaders("content-type","application/json")
-            .WithHeaders("cookie","cookie")
-            .WithContent("{\"token\":\"glados.network\"}")
-            .Respond("application/json", await File.ReadAllTextAsync(json));
+            .When("https://www.hifini.com/sg_sign.htm")
+            .WithHeaders("X-Requested-With","XMLHttpRequest")
+            .WithHeaders("cookie","bbs_token=test")
+            .Respond("text/html", await File.ReadAllTextAsync(json));
         var httpClient = mockHttp.ToHttpClient();
         var reporter = new Mock<IReporter>();
-        var handler = new GladosHandler(httpClient, reporter.Object);
-        await handler.ReportCheckInAsync("cookie");
+        var handler = new HifiniHandler(httpClient, reporter.Object);
+        await handler.ReportCheckInAsync("bbs_token=test");
 
         reporter.Verify(t => t.ReportAsync(It.Is<CheckInResponse>(p => p.Message == message)), Times.Once());
     }
@@ -37,8 +35,7 @@ public class GladosHandlerTests
         {
             return new (string json, string message)[]
             {
-                ("Glados/checkin-0.json", "Checkin! Get 1 Day"),
-                ("Glados/checkin-1.json", "Please Try Tomorrow"),
+                ("Hifini/checkin-0.txt", "今天已经签过啦！"),
             };
         }
     }

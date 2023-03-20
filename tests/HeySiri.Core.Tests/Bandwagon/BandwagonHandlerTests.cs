@@ -41,7 +41,7 @@ public class BandwagonHandlerTests
             return new (string json, string tz, TelegramConfiguration configuration, string message)[]
             {
                 (
-                    "TestFiles/liveServiceInfo.json",
+                    "Bandwagon/liveServiceInfo.json",
                     "China Standard Time",
                     new TelegramConfiguration
                     {

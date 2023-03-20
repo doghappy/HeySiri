@@ -23,13 +23,16 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="TestFiles\liveServiceInfo.json">
+      <None Update="Glados\checkin-0.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="TestFiles\checkin-1.json">
+      <None Update="Glados\checkin-1.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="TestFiles\checkin-0.json">
+      <None Update="Bandwagon\liveServiceInfo.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Hifini\checkin-0.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
