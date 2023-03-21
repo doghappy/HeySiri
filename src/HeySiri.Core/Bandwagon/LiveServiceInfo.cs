@@ -80,10 +80,10 @@ VPS ID: {Id}
 IP Address: {string.Join(", ", IPAddresses)}
 SSH Port: {SshPort}
 Status: {Status}
-RAM Usage(MB): {MemUnavailableB.ByteToMebi():N}/{PlanRam.ByteToMebi():N} {(MemUnavailableB * 1.0 / PlanRam):P}
-SWAP Usage(MB): {SwapUnavailableKB.KibiToMebi():N}/{SwapTotalKB.KibiToMebi():N} {(SwapUnavailableKB * 1.0 / SwapTotalKB):P}
-Disk Usage(GB): {UsedDiskSpaceB.ByteToGibi():N}/{PlanDisk.ByteToGibi():N} {(UsedDiskSpaceB * 1.0 / PlanDisk):P}
-Bandwidth Usage(GB): {DataCounter.ByteToGibi():N}/{PlanMonthlyData.ByteToGibi():N} {(DataCounter * 1.0 / PlanMonthlyData):P}
+RAM Usage(MB): {MemUnavailableB.ByteToMebi():N2}/{PlanRam.ByteToMebi():N2} {(MemUnavailableB * 1.0 / PlanRam):P2}
+SWAP Usage(MB): {SwapUnavailableKB.KibiToMebi():N2}/{SwapTotalKB.KibiToMebi():N2} {(SwapUnavailableKB * 1.0 / SwapTotalKB):P2}
+Disk Usage(GB): {UsedDiskSpaceB.ByteToGibi():N2}/{PlanDisk.ByteToGibi():N2} {(UsedDiskSpaceB * 1.0 / PlanDisk):P2}
+Bandwidth Usage(GB): {DataCounter.ByteToGibi():N2}/{PlanMonthlyData.ByteToGibi():N2} {(DataCounter * 1.0 / PlanMonthlyData):P2}
 Bandwidth Resets: {DataNextReset}
 OS: {OS}";
         }
