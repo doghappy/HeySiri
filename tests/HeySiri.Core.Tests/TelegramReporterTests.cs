@@ -43,7 +43,7 @@ public class TelegramReporterTests
                     new CheckInResponse { Message = "Hello 🌎🌏🌍" },
                     $@"Glados Check In: Hello 🌎🌏🌍
 
-3/9/2023 7:10:45 AM(China Standard Time)"
+{new FakeDateTimeProvider().UtcNow}(China Standard Time)"
                 ),
             };
         }

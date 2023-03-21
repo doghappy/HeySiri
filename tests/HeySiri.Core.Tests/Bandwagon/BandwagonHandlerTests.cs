@@ -66,7 +66,7 @@ Bandwidth Usage(GB): 21.70/1,000.00 {0.0217:P}
 Bandwidth Resets: 3/14/2023 2:23:25 PM +00:00
 OS: centos-7-x86_64-bbr
 
-3/9/2023 7:10:45 AM(China Standard Time)"),
+{new FakeDateTimeProvider().UtcNow}(China Standard Time)"),
             };
         }
     }
