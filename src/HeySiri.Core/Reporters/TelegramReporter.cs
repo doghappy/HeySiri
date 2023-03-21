@@ -17,6 +17,8 @@ public class TelegramReporter : BaseReporter
 
     protected override async Task ReportCoreAsync(string report)
     {
+        Console.WriteLine("====2");
+        Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(report));
         await _telegramBotClient.SendTextMessageAsync(
             chatId: _configuration.ChatId,
             text: report);

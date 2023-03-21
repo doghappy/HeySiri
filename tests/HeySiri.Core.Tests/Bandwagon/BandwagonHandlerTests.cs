@@ -27,6 +27,9 @@ public class BandwagonHandlerTests
         var handler = new BandwagonHandler(httpClient, reporter);
         await handler.ReportLiveServiceInfoAsync("123", "apiKey");
 
+        Console.WriteLine("====1");
+        Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(message));
+        
         telegramBotClient.Verify(t => t.SendTextMessageAsync(
             configuration.ChatId,
             It.Is<string>(x => x.EqualsIgnoreCarriageReturn(message))
