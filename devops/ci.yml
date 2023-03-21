@@ -17,7 +17,7 @@ stages:
             inputs:
               workingDirectory: $(Agent.BuildDirectory)/s/tests/HeySiri.Core.Tests
               command: test
-              arguments: '-l "console;verbosity=detailed"'
+              # arguments: '-l "console;verbosity=detailed"'
           - task: Docker@2
             displayName: Build and Push
             inputs:

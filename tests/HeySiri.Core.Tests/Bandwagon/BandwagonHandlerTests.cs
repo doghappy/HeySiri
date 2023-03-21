@@ -26,9 +26,6 @@ public class BandwagonHandlerTests
         var reporter = new TelegramReporter(tz, new FakeDateTimeProvider(), telegramBotClient.Object, configuration);
         var handler = new BandwagonHandler(httpClient, reporter);
         await handler.ReportLiveServiceInfoAsync("123", "apiKey");
-
-        Console.WriteLine("====1");
-        Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(message));
         
         telegramBotClient.Verify(t => t.SendTextMessageAsync(
             configuration.ChatId,

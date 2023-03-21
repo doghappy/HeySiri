@@ -20,9 +20,6 @@ public class TelegramReporterTests
         var repoter = new TelegramReporter(tz, new FakeDateTimeProvider(), telegramBotClient.Object, configuration);
         await repoter.ReportAsync(data);
 
-        Console.WriteLine("====3");
-        Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(expectedMessage));
-
         telegramBotClient.Verify(t => t.SendTextMessageAsync(
             It.Is<string>(x => x == "test"),
             It.Is<string>(x => x.EqualsIgnoreCarriageReturn(expectedMessage))
