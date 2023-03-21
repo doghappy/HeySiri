@@ -52,17 +52,17 @@ public class BandwagonHandlerTests
                     {
                         ChatId = "123456",
                     },
-                    $@"Plan: kvmv5-the-plan-v1
+                    @"Plan: kvmv5-the-plan-v1
 Host Name: awesome-kitten-3.localdomain
 Data Center: Japan: Osaka (Softbank)
 VPS ID: 1764158
 IP Address: 23.106.141.202
 SSH Port: 26122
 Status: Running
-RAM Usage(MB): 703.40/2,048.00 {0.3435:P}
-SWAP Usage(MB): 0.00/1,024.00 {0.00:P}
-Disk Usage(GB): 4.53/40.00 {0.1133:P}
-Bandwidth Usage(GB): 21.70/1,000.00 {0.0217:P}
+RAM Usage(MB): 703.40/2,048.00 34.35%
+SWAP Usage(MB): 0.00/1,024.00 0.00%
+Disk Usage(GB): 4.53/40.00 11.33%
+Bandwidth Usage(GB): 21.70/1,000.00 2.17%
 Bandwidth Resets: 3/14/2023 2:23:25 PM +00:00
 OS: centos-7-x86_64-bbr
 
