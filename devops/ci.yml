@@ -10,7 +10,7 @@ stages:
   - stage: HeySiri
     jobs:
       - job:
-        displayName: Unit tests
+        displayName: CI
         steps:
           - task: DotNetCoreCLI@2
             displayName: HeySiri.Core.Tests
