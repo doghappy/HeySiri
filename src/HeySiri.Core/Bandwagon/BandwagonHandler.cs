@@ -29,7 +29,8 @@ public class BandwagonHandler
     private async Task<LiveServiceInfo> GetLiveServiceInfoAsync(string veid, string apiKey)
     {
         return await _httpClient.GetFromJsonAsync<LiveServiceInfo>(
-            $"v1/getLiveServiceInfo?veid={veid}&api_key={apiKey}", JsonSerializerOptions);
+            $"https://api.64clouds.com/v1/getLiveServiceInfo?veid={veid}&api_key={apiKey}",
+            JsonSerializerOptions);
     }
 
     public async Task ReportLiveServiceInfoAsync(string veid, string apiKey)

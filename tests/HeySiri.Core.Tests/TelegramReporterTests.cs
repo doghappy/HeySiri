@@ -22,7 +22,7 @@ public class TelegramReporterTests
 
         telegramBotClient.Verify(t => t.SendTextMessageAsync(
             It.Is<string>(x => x == "test"),
-            It.Is<string>(x => x == expectedMessage)
+            It.Is<string>(x => x.EqualsIgnoreCarriageReturn(expectedMessage))
         ), Times.Once);
     }
 

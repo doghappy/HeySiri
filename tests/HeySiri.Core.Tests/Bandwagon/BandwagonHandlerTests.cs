@@ -10,7 +10,7 @@ public class BandwagonHandlerTests
 {
     [TestMethod]
     [DynamicData(nameof(LiveServiceInfoCases))]
-    public async Task Should_report_live_service_info(string json, string tz,TelegramConfiguration configuration, string message)
+    public async Task Should_report_live_service_info(string json, string tz, TelegramConfiguration configuration, string message)
     {
         var mockHttp = new MockHttpMessageHandler();
         mockHttp
@@ -22,13 +22,15 @@ public class BandwagonHandlerTests
             })
             .Respond("text/plain", await File.ReadAllTextAsync(json));
         var httpClient = mockHttp.ToHttpClient();
-        httpClient.BaseAddress = new Uri("https://api.64clouds.com");
         var telegramBotClient = new Mock<ITelegramBotClient>();
         var reporter = new TelegramReporter(tz, new FakeDateTimeProvider(), telegramBotClient.Object, configuration);
         var handler = new BandwagonHandler(httpClient, reporter);
         await handler.ReportLiveServiceInfoAsync("123", "apiKey");
 
-        telegramBotClient.Verify(t => t.SendTextMessageAsync(configuration.ChatId, message), Times.Once());
+        telegramBotClient.Verify(t => t.SendTextMessageAsync(
+            configuration.ChatId,
+            It.Is<string>(x => x.EqualsIgnoreCarriageReturn(message))
+        ), Times.Once());
     }
 
     private static IEnumerable<object[]> LiveServiceInfoCases =>
