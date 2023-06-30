@@ -15,6 +15,13 @@ public class HifiniHandlerTests
         var mockHttp = new MockHttpMessageHandler();
         mockHttp
             .When("https://www.hifini.com/sg_sign.htm")
+            .WithHeaders("User-Agent","Mozilla/5.0")
+            .WithHeaders("User-Agent","(Windows NT 10.0; Win64; x64)")
+            .WithHeaders("User-Agent","AppleWebKit/537.36")
+            .WithHeaders("User-Agent","(KHTML, like Gecko)")
+            .WithHeaders("User-Agent","Chrome/114.0.0.0")
+            .WithHeaders("User-Agent","Safari/537.36")
+            .WithHeaders("User-Agent","Edg/114.0.1823.58")
             .WithHeaders("X-Requested-With","XMLHttpRequest")
             .WithHeaders("cookie","bbs_token=test")
             .Respond("text/html", await File.ReadAllTextAsync(json));
